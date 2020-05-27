@@ -1,0 +1,5 @@
+aiohttp
+youtube_dl
+twint
+argparse
+coloredlogs
