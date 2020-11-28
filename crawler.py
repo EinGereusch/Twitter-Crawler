@@ -16,7 +16,7 @@ if os.path.isfile(csv_file_path):
     sys.exit(-1)
 
 destination_directory = f"{args.destination_directory.rstrip(os.sep)}{os.sep}{args.user}"
-os.makedirs(destination_directory)
+os.makedirs(destination_directory, exist_ok=True)
 
 twint_config = twint.Config()
 twint_config.Username = args.user

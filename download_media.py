@@ -19,4 +19,7 @@ async def download_video(url: str, destination_dir: str):
         "outtmpl": f"{destination_dir}{os.sep}%(id)s.%(ext)s"
     }
     with youtube_dl.YoutubeDL(opts) as ydl:
-        await event_loop.run_in_executor(None, lambda: ydl.download([url]))
+        try:
+            await event_loop.run_in_executor(None, lambda: ydl.download([url]))
+        except:
+            pass

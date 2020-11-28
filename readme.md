@@ -13,3 +13,12 @@ to the users Twitter-Handle (@Username).
 2. [Create and activate a virtual environment](https://uoa-eresearch.github.io/eresearch-cookbook/recipe/2014/11/26/python-virtual-env/) within your local copy's directory.
 3. Run `pip install -r requirements.txt`
 4. Run `python crawler.py -user user_name -destination-directory directory`
+
+# Knwon issues
+
+Twint may be out of date whithin pip repositories; if you run into any issues, try installing Twint from Github directly.
+To do so, run 
+
+`pip install --upgrade -e git+https://github.com/twintproject/twint.git@origin/master#egg=twint`
+
+within your virtual environment
